@@ -1,3 +1,86 @@
-p {
-    color: green;
+/* Layout for small screens with width less than 576px */
+/* Site grid */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(100, 1fr);
+    background-color: chartreuse;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(100, 1fr);
+}
+
+#numberspan {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+/* Generated divs */
+
+#numberspan .neither {
+    display: block;
+    height: 50px;
+    width: 50px;
+    color: blue;
+}
+
+#numberspan .fizz {
+    display: block;
+    color: red;
+    height: 50px;
+    width: 50px;
+}
+
+#numberspan .buzz {
+    display: block;
+    color: goldenrod;
+    height: 50px;
+    width: 50px;
+}
+
+#numberspan .both {
+    height: 50px;
+    width: 50px;
+    display: block;
+    color: magenta;
+}
+
+@media screen and (min-width: 576px) {
+
+    /* Layout on tablet screens */
+    body {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(20, 1fr);
+        background-color: aquamarine;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(20, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    /* Layout on computer screens */
+    body {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        background-color: bisque;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+    }
+
 }
