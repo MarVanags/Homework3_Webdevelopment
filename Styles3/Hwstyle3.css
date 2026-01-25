@@ -3,18 +3,23 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(100, 1fr);
+    grid-template-areas: 
+    "divcontainer";
     background-color: chartreuse;
 }
 
 main {
+    grid-area: divcontainer;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(100, 1fr);
+    grid-template-areas:
+    "gendivs";
 }
 
 #numberspan {
+    grid-area: gendivs;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(100, 1fr);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
 }
@@ -46,21 +51,17 @@ main {
     height: 50px;
     width: 50px;
     display: block;
-    color: magenta;
+    color: olive;
 }
 
 @media screen and (min-width: 576px) {
 
     /* Layout on tablet screens */
     body {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(20, 1fr);
         background-color: aquamarine;
     }
 
-    main {
-        display: grid;
+    #numberspan {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(20, 1fr);
     }
@@ -71,13 +72,10 @@ main {
 
     /* Layout on computer screens */
     body {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, 1fr);
         background-color: bisque;
     }
 
-    main {
+    #numberspan {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(10, 1fr);
