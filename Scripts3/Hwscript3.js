@@ -1,6 +1,4 @@
-console.log("Work in progress")
-
-// Setting the necessary values
+// Setting the value for generated div container
 
 const numbersdivs = document.getElementById("numberspan");
 
